@@ -13,7 +13,7 @@
 -   [Create a plot of residuals vs. predicted with
     Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
 
-1.  \[Get Impala and Malibu cars in separate data.frames\]
+2.  [Get Impala and Malibu cars in separate data.frames](#get-impala-and-malibu-cars-in-separate-date.frames)
 
 -   [Fitting a model for Impala and
     Malibu](#fitting-a-model-for-impala-and-malibu)
@@ -28,14 +28,11 @@
 
 Libraries needed: dplyr, ggplot2, scales.
 
-``` r
-load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
-```
 
 Get Chevrolet cars in a separate data.frame
 -------------------------------------------
 
-Apply a filter: I want only Chevrolets and am going to be only working
+Apply a filter: I only want Chevrolets and am going to be only working
 with Make, Price, and Miles variables.
 
 ``` r
