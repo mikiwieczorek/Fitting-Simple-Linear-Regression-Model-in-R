@@ -8,19 +8,20 @@ output:
 ---
 
 1. [Get Chevrolet cars in a separate data.frame]
-+ [Fit a model]
-+ [Create Residual and Predicted variables]
-+ [Create a plot of actual vs. predicted values]
-+ [Create a plot of residuals vs. predicted]
-+ [Create a plot of Price vs. Miles]
-+ [Loess fit object]
-+ [Create a plot of residuals vs. predicted with Loess]
+    + [Fit a model]
+    + [Create Residual and Predicted variables]
+    + [Create a plot of actual vs. predicted values]
+    + [Create a plot of residuals vs. predicted]
+    + [Create a plot of Price vs. Miles]
+    + [Loess fit object]
+    + [Create a plot of residuals vs. predicted with Loess]
+
 2. [Get Impala and Malibu cars in separate data.frames]
-+ [Fitting a model for Impala and Malibu]
-+ [Set up data.frame in order to make predictions for every 10000 miles]
-+ [Getting predictions for Impala’s and Malibu‘s vehicles]
-+ [Create a plot of both regression lines]
-+ [Regression lines intersection point coordinates]
+    + [Fitting a model for Impala and Malibu]
+    + [Set up data.frame in order to make predictions for every 10000 miles]
+    + [Getting predictions for Impala’s and Malibu‘s vehicles]
+    + [Create a plot of both regression lines]
+    + [Regression lines intersection point coordinates]
 
 Libraries needed: dplyr, ggplot2, scales.
 
@@ -31,7 +32,7 @@ library(scales)
 ```
 
 ```{r}
-load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
+load("~/file_path/UsedCars.RData")
 ```
 
 ```{r eval=FALSE, include=FALSE}

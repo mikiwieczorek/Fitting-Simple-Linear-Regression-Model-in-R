@@ -1,30 +1,28 @@
 1.  [Get Chevrolet cars in a separate
     data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
-
--   [Fit a model](#fit-a-model)
--   [Create Residual and Predicted
-    variables](#create-residual-and-predicted-variables)
--   [Create a plot of actual vs. predicted
-    values](#create-a-plot-of-actual-vs.predicted-values)
--   [Create a plot of residuals
-    vs. predicted](#create-a-plot-of-residuals-vs.predicted)
--   [Create a plot of Price vs. Miles](#create-a-plot-of-price-vs.miles)
--   [Loess fit object](#loess-fit-object)
--   [Create a plot of residuals vs. predicted with
-    Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
-
-2.  [Get Impala and Malibu cars in separate data.frames](#get-impala-and-malibu-cars-in-separate-date.frames)
-
--   [Fitting a model for Impala and
-    Malibu](#fitting-a-model-for-impala-and-malibu)
--   [Set up data.frame in order to make predictions for every 10000
-    miles](#set-up-data.frame-in-order-to-make-predictions-for-every-10000-miles)
--   [Getting predictions for Impala’s and Malibu‘s
-    vehicles](#getting-predictions-for-impalas-and-malibus-vehicles)
--   [Create a plot of both regression
-    lines](#create-a-plot-of-both-regression-lines)
--   [Regression lines intersection point
-    coordinates](#regression-lines-intersection-point-coordinates)
+    -   [Fit a model](#fit-a-model)
+    -   [Create Residual and Predicted
+        variables](#create-residual-and-predicted-variables)
+    -   [Create a plot of actual vs. predicted
+        values](#create-a-plot-of-actual-vs.predicted-values)
+    -   [Create a plot of residuals
+        vs. predicted](#create-a-plot-of-residuals-vs.predicted)
+    -   [Create a plot of Price
+        vs. Miles](#create-a-plot-of-price-vs.miles)
+    -   [Loess fit object](#loess-fit-object)
+    -   [Create a plot of residuals vs. predicted with
+        Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
+2.  \[Get Impala and Malibu cars in separate data.frames\]
+    -   [Fitting a model for Impala and
+        Malibu](#fitting-a-model-for-impala-and-malibu)
+    -   [Set up data.frame in order to make predictions for every 10000
+        miles](#set-up-data.frame-in-order-to-make-predictions-for-every-10000-miles)
+    -   [Getting predictions for Impala’s and Malibu‘s
+        vehicles](#getting-predictions-for-impalas-and-malibus-vehicles)
+    -   [Create a plot of both regression
+        lines](#create-a-plot-of-both-regression-lines)
+    -   [Regression lines intersection point
+        coordinates](#regression-lines-intersection-point-coordinates)
 
 Libraries needed: dplyr, ggplot2, scales.
 
@@ -32,7 +30,7 @@ Libraries needed: dplyr, ggplot2, scales.
 Get Chevrolet cars in a separate data.frame
 -------------------------------------------
 
-Apply a filter: I only want Chevrolets and am going to be only working
+Apply a filter: I want only Chevrolets and am going to be only working
 with Make, Price, and Miles variables.
 
 ``` r

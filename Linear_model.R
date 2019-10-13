@@ -4,7 +4,7 @@ library(scales)
 
 
 
-load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
+load("~/file_path/UsedCars.RData")
 
 
 
