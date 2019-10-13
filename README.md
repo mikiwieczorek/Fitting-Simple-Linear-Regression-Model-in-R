@@ -12,7 +12,9 @@
     -   [Loess fit object](#loess-fit-object)
     -   [Create a plot of residuals vs. predicted with
         Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
-2.  \[Get Impala and Malibu cars in separate data.frames\]
+        
+2.  [Form separate data.frames for Impala and 
+    Malibu cars](#form-separate-data.frames-for-impala-and-malibu-cars)
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
     -   [Set up data.frame in order to make predictions for every 10000
@@ -109,7 +111,7 @@ ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = Price)) +
   geom_point() +
   geom_abline(intercept = 0, slope = 1, lwd = 1, col = "blue") +
   xlim(0,25000) +
-  labs(x = "Predicted Values", y = "Actual Values", title = "Mikolaj Wieczorek")
+  labs(x = "Predicted Values", y = "Actual Values", title = "Actual vs. Predicted")
 ```
 
     ## Warning: Removed 18 rows containing missing values (geom_point).
@@ -191,8 +193,8 @@ ggplot(Used_Cars_Chevi_Loess_Resid.Predict, aes(x = Predicted_Loess, y = Residua
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
-Now, I am interested only in Impala and Malibu models. \#\# Get Impala
-and Malibu cars in separate data.frames
+Now, I am interested only in Impala and Malibu models. <br></br> \#\#
+Form separate data.frames for Impala and Malibu cars
 
 ``` r
 ( UsedCars

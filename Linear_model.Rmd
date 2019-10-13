@@ -16,7 +16,7 @@ output:
     + [Loess fit object]
     + [Create a plot of residuals vs. predicted with Loess]
 
-2. [Get Impala and Malibu cars in separate data.frames]
+2. [Form separate data.frames for Impala and Malibu cars]
     + [Fitting a model for Impala and Malibu]
     + [Set up data.frame in order to make predictions for every 10000 miles]
     + [Getting predictions for Impala’s and Malibu‘s vehicles]
@@ -73,7 +73,7 @@ ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = Price)) +
   geom_point() +
   geom_abline(intercept = 0, slope = 1, lwd = 1, col = "blue") +
   xlim(0,25000) +
-  labs(x = "Predicted Values", y = "Actual Values", title = "Mikolaj Wieczorek")
+  labs(x = "Predicted Values", y = "Actual Values", title = "Actual vs. Predicted")
 ```
 
 ### Create a plot of residuals vs. predicted
@@ -133,8 +133,8 @@ ggplot(Used_Cars_Chevi_Loess_Resid.Predict, aes(x = Predicted_Loess, y = Residua
   scale_y_continuous(labels = comma, breaks = pretty_breaks(n=10))
 ```
 
-Now, I am interested only in Impala and Malibu models.
-## Get Impala and Malibu cars in separate data.frames
+Now, I am interested only in Impala and Malibu models. <br></br>
+## Form separate data.frames for Impala and Malibu cars
 ```{r}
 ( UsedCars
   %>% select(Model,Price,Miles)
