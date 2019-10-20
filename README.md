@@ -12,9 +12,7 @@
     -   [Loess fit object](#loess-fit-object)
     -   [Create a plot of residuals vs. predicted with
         Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
-        
-2.  [Form separate data.frames for Impala and 
-    Malibu cars](#form-separate-data.frames-for-impala-and-malibu-cars)
+2.  \[Form separate data.frames for Impala and Malibu cars\]
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
     -   [Set up data.frame in order to make predictions for every 10000
@@ -28,6 +26,9 @@
 
 Libraries needed: dplyr, ggplot2, scales.
 
+``` r
+load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
+```
 
 Get Chevrolet cars in a separate data.frame
 -------------------------------------------
@@ -40,21 +41,6 @@ with Make, Price, and Miles variables.
   %>% select(Make,Price,Miles)
   %>% filter(Make == "Chevrolet")
 ) -> UsedCars_Chevi
-```
-
-    ## Warning: `lang()` is deprecated as of rlang 0.2.0.
-    ## Please use `call2()` instead.
-    ## This warning is displayed once per session.
-
-    ## Warning: `new_overscope()` is deprecated as of rlang 0.2.0.
-    ## Please use `new_data_mask()` instead.
-    ## This warning is displayed once per session.
-
-    ## Warning: `overscope_eval_next()` is deprecated as of rlang 0.2.0.
-    ## Please use `eval_tidy()` with a data mask instead.
-    ## This warning is displayed once per session.
-
-``` r
 str(UsedCars_Chevi)
 ```
 
@@ -97,9 +83,6 @@ summary(UsedCars_SLR)
            SLR.Predicted = UsedCars_SLR$fitted.values)) -> Used_Cars_Chevi_Resid.Predict
 ```
 
-    ## Warning: The `printer` argument is deprecated as of rlang 0.3.0.
-    ## This warning is displayed once per session.
-
 ### Create a plot of actual vs. predicted values
 
 Set x-axis limit to start from 0 since price cannot be negative. This
@@ -113,8 +96,6 @@ ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = Price)) +
   xlim(0,25000) +
   labs(x = "Predicted Values", y = "Actual Values", title = "Actual vs. Predicted")
 ```
-
-    ## Warning: Removed 18 rows containing missing values (geom_point).
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
@@ -150,8 +131,6 @@ ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = SLR.Residuals))
   scale_y_continuous(labels = comma, breaks = pretty_breaks()) +
   labs(x = "Predicted Values", y = "Residuals", title = "Residuals vs. Predicted")
 ```
-
-    ## Warning: Removed 18 rows containing missing values (geom_point).
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-11-1.png)
 
@@ -250,7 +229,7 @@ Dashed: Malibu Regular: Impala
 
 ### Regression lines intersection point coordinates
 
-Find at how many miles Malibu becomes more expensive than Impala. I.g.
+Find at how many miles Malibu becomes more expensive than Impala. I.e.
 find the coordinates of a point where the 2 regression lines intersect.
 
 Form a coefficient matrix ‘cm’ using coefficients from the output of
@@ -276,6 +255,6 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
 ```
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)
-<br></br> Malibu is cheaper that Impala when it has less than 89,508
-miles. When it has more than that, it becomes more expensive than
-Impala.
+Dashed: Malibu Regular: Impala <br></br> Malibu is cheaper that Impala
+when it has less than 89,508 miles. When it has more than that, it
+becomes more expensive than Impala.

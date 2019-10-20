@@ -32,7 +32,7 @@ library(scales)
 ```
 
 ```{r}
-load("~/file_path/UsedCars.RData")
+load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -68,7 +68,7 @@ UsedCars_SLR$residuals
 
 ### Create a plot of actual vs. predicted values
 Set x-axis limit to start from 0 since price cannot be negative. This will display a warning message: "Removed 18 rows containing missing values (geom_point)."
-```{r}
+```{r warning=FALSE}
 ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = Price)) +
   geom_point() +
   geom_abline(intercept = 0, slope = 1, lwd = 1, col = "blue") +
@@ -88,7 +88,7 @@ summary$sigma
 2*3274
 ```
 Thus, outliers will be the points whose residual values are greater than 6548 or smaller than - 6548.
-```{r}
+```{r warning=FALSE}
 ggplot(Used_Cars_Chevi_Resid.Predict, aes(x = SLR.Predicted, y = SLR.Residuals)) +
   geom_point() +
   geom_hline(yintercept = c(0)) +
@@ -187,7 +187,7 @@ Dashed: Malibu
 Regular: Impala
 
 ### Regression lines intersection point coordinates
-Find at how many miles Malibu becomes more expensive than Impala. I.g. find the coordinates of a point where the 2 regression lines intersect.
+Find at how many miles Malibu becomes more expensive than Impala. I.e. find the coordinates of a point where the 2 regression lines intersect.
 
 Form a coefficient matrix 'cm' using coefficients from the output of lm() function: UsedCars_Impala_SLR and UsedCars_Malibu_SLR.
 ```{r}
@@ -204,6 +204,8 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
   scale_y_continuous(labels = dollar_format(prefix="$"), breaks = pretty_breaks(n=10)) +
   geom_point(aes(x=89508.494, y=9238.901), colour="blue", size =3) 
 ```
+Dashed: Malibu
+Regular: Impala
 <br></br>
 Malibu is cheaper that Impala when it has less than 89,508 miles. When it has more than that, it becomes more expensive than Impala.
 
