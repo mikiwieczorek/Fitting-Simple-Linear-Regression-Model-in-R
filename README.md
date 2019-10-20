@@ -1,5 +1,5 @@
 1.  [Get Chevrolet cars in a separate
-    data.frame](#Get-Chevrolet-cars-in-a-separate-data.frame)
+    data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
     -   [Create Residual and Predicted
         variables](#create-residual-and-predicted-variables)
@@ -12,7 +12,7 @@
     -   [Loess fit object](#loess-fit-object)
     -   [Create a plot of residuals vs. predicted with
         Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
-2.  [Form separate data.frames for Impala and Malibu cars](#form-separate-data.frames-for-Impala-and-Malibu-cars)
+2.  [Form separate data.frames for Impala and Malibu cars](#form-separate-data.frames-for-impala-and-malibu-cars)
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
     -   [Set up data.frame in order to make predictions for every 10000
@@ -27,10 +27,10 @@
 Libraries needed: dplyr, ggplot2, scales.
 
 ``` r
-load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
+load("~/file_path/UsedCars.RData")
 ```
 
-## Get Chevrolet cars in a separate data.frame
+### Get Chevrolet cars in a separate data.frame
 -------------------------------------------
 
 Apply a filter: I want only Chevrolets and am going to be only working
@@ -173,7 +173,7 @@ ggplot(Used_Cars_Chevi_Loess_Resid.Predict, aes(x = Predicted_Loess, y = Residua
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 Now, I am interested only in Impala and Malibu models. <br></br> 
-## Form separate data.frames for Impala and Malibu cars
+### Form separate data.frames for Impala and Malibu cars
 -------------------------------------------------------
 
 ``` r
