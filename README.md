@@ -1,19 +1,14 @@
-# Fitting a Simple Linear Regression Model to Predict Price of Car Based On Its Mileage
 1.  [Get Chevrolet cars in a separate
     data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
     -   [Create Residual and Predicted
         variables](#create-residual-and-predicted-variables)
-    -   [Create a plot of actual vs. predicted
-        values][#plot-of-actual-vs.-predicted-values]
-    -   [Create a plot of residuals
-        vs. predicted](#create-a-plot-of-residuals-vs.predicted)
-    -   [Create a plot of Price
-        vs. Miles](#create-a-plot-of-price-vs.miles)
+    -   \[Actual vs. predicted values\]
+    -   \[Residuals vs. predicted\]
+    -   \[Price vs. Miles\]
     -   [Loess fit object](#loess-fit-object)
-    -   [Create a plot of residuals vs. predicted with
-        Loess](#create-a-plot-of-actual-vs.-predicted-values)
-2.  [Form separate data.frames for Impala and Malibu cars](#form-separate-data.frames-for-impala-and-malibu-cars)
+    -   \[Plot of residuals vs. predicted with Loess\]
+2.  \[Form separate data.frames for Impala and Malibu cars\]
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
     -   [Set up data.frame in order to make predictions for every 10000
@@ -28,10 +23,10 @@
 Libraries needed: dplyr, ggplot2, scales.
 
 ``` r
-load("~/file_path/UsedCars.RData")
+load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
 ```
 
-### Get Chevrolet cars in a separate data.frame
+Get Chevrolet cars in a separate data.frame
 -------------------------------------------
 
 Apply a filter: I want only Chevrolets and am going to be only working
@@ -84,7 +79,7 @@ summary(UsedCars_SLR)
            SLR.Predicted = UsedCars_SLR$fitted.values)) -> Used_Cars_Chevi_Resid.Predict
 ```
 
-### Plot of actual vs. predicted values
+### Create a plot of actual vs. predicted values
 
 Set x-axis limit to start from 0 since price cannot be negative. This
 will display a warning message: “Removed 18 rows containing missing
@@ -173,9 +168,8 @@ ggplot(Used_Cars_Chevi_Loess_Resid.Predict, aes(x = Predicted_Loess, y = Residua
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
-Now, I am interested only in Impala and Malibu models. <br></br> 
-### Form separate data.frames for Impala and Malibu cars
--------------------------------------------------------
+Now, I am interested only in Impala and Malibu models. <br></br> \#\#
+Form separate data.frames for Impala and Malibu cars
 
 ``` r
 ( UsedCars
@@ -226,7 +220,7 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
   scale_y_continuous(labels = dollar_format(prefix="$"), breaks = pretty_breaks(n=10))
 ```
 
-![](Linear_model_files/figure-markdown_github/unnamed-chunk-20-1.png)<br></br>
+![](Linear_model_files/figure-markdown_github/unnamed-chunk-20-1.png)
 Dashed: Malibu Regular: Impala
 
 ### Regression lines intersection point coordinates
@@ -256,7 +250,7 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
   geom_point(aes(x=89508.494, y=9238.901), colour="blue", size =3) 
 ```
 
-![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)<br></br>
+![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)
 Dashed: Malibu Regular: Impala <br></br> Malibu is cheaper that Impala
 when it has less than 89,508 miles. When it has more than that, it
 becomes more expensive than Impala.
