@@ -1,17 +1,18 @@
+# Fitting a Simple Linear Regression Model to Predict Price of Car Based On Its Mileage
 1.  [Get Chevrolet cars in a separate
     data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
     -   [Create Residual and Predicted
         variables](#create-residual-and-predicted-variables)
     -   [Create a plot of actual vs. predicted
-        values](#create-a-plot-of-actual-vs.predicted-values)
+        values][#plot-of-actual-vs.-predicted-values]
     -   [Create a plot of residuals
         vs. predicted](#create-a-plot-of-residuals-vs.predicted)
     -   [Create a plot of Price
         vs. Miles](#create-a-plot-of-price-vs.miles)
     -   [Loess fit object](#loess-fit-object)
     -   [Create a plot of residuals vs. predicted with
-        Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
+        Loess](#create-a-plot-of-actual-vs.-predicted-values)
 2.  [Form separate data.frames for Impala and Malibu cars](#form-separate-data.frames-for-impala-and-malibu-cars)
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
@@ -83,7 +84,7 @@ summary(UsedCars_SLR)
            SLR.Predicted = UsedCars_SLR$fitted.values)) -> Used_Cars_Chevi_Resid.Predict
 ```
 
-### Create a plot of actual vs. predicted values
+### Plot of actual vs. predicted values
 
 Set x-axis limit to start from 0 since price cannot be negative. This
 will display a warning message: “Removed 18 rows containing missing
