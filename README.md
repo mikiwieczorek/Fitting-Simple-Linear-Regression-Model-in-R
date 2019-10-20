@@ -1,3 +1,4 @@
+# Fit a Simple Linear Regression Model To Predict Price of Cars Based On Mileage
 1.  [Get Chevrolet cars in a separate
     data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
@@ -221,7 +222,9 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
 ```
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-20-1.png)
-Dashed: Malibu Regular: Impala
+<br></br>
+Dashed: Malibu <br>
+Regular: Impala
 
 ### Regression lines intersection point coordinates
 
@@ -251,6 +254,7 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
 ```
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)
-Dashed: Malibu Regular: Impala <br></br> Malibu is cheaper that Impala
-when it has less than 89,508 miles. When it has more than that, it
-becomes more expensive than Impala.
+<br></br>
+Dashed: Malibu <br>
+Regular: Impala  
+Malibu is cheaper that Impala when it has less than 89,508 miles. When it has more than that, it becomes more expensive than Impala.
