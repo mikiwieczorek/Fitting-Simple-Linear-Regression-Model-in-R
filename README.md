@@ -1,3 +1,5 @@
+Fitting Simple Linear Regression Model in R
+-------------------------------------------
 1.  [Get Chevrolet cars in a separate
     data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
