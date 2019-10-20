@@ -1,5 +1,5 @@
 1.  [Get Chevrolet cars in a separate
-    data.frame](#get-chevrolet-cars-in-a-separate-data.frame)
+    data.frame](#Get-Chevrolet-cars-in-a-separate-data.frame)
     -   [Fit a model](#fit-a-model)
     -   [Create Residual and Predicted
         variables](#create-residual-and-predicted-variables)
@@ -12,7 +12,7 @@
     -   [Loess fit object](#loess-fit-object)
     -   [Create a plot of residuals vs. predicted with
         Loess](#create-a-plot-of-residuals-vs.predicted-with-loess)
-2.  \[Form separate data.frames for Impala and Malibu cars\]
+2.  [Form separate data.frames for Impala and Malibu cars](#form-separate-data.frames-for-Impala-and-Malibu-cars)
     -   [Fitting a model for Impala and
         Malibu](#fitting-a-model-for-impala-and-malibu)
     -   [Set up data.frame in order to make predictions for every 10000
@@ -30,7 +30,7 @@ Libraries needed: dplyr, ggplot2, scales.
 load("~/OneDrive - MNSCU/myGithub/Statistics/Regression_models/Fitting-Simple-Linear-Regression-Model-in-R/UsedCars.RData")
 ```
 
-Get Chevrolet cars in a separate data.frame
+## Get Chevrolet cars in a separate data.frame
 -------------------------------------------
 
 Apply a filter: I want only Chevrolets and am going to be only working
@@ -172,8 +172,9 @@ ggplot(Used_Cars_Chevi_Loess_Resid.Predict, aes(x = Predicted_Loess, y = Residua
 
 ![](Linear_model_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
-Now, I am interested only in Impala and Malibu models. <br></br> \#\#
-Form separate data.frames for Impala and Malibu cars
+Now, I am interested only in Impala and Malibu models. <br></br> 
+## Form separate data.frames for Impala and Malibu cars
+-------------------------------------------------------
 
 ``` r
 ( UsedCars
@@ -224,7 +225,7 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
   scale_y_continuous(labels = dollar_format(prefix="$"), breaks = pretty_breaks(n=10))
 ```
 
-![](Linear_model_files/figure-markdown_github/unnamed-chunk-20-1.png)
+![](Linear_model_files/figure-markdown_github/unnamed-chunk-20-1.png)<br></br>
 Dashed: Malibu Regular: Impala
 
 ### Regression lines intersection point coordinates
@@ -254,7 +255,7 @@ ggplot(UsedCars_NewPrediction, mapping=aes(x=Miles,y=Impala_Predictions)) +
   geom_point(aes(x=89508.494, y=9238.901), colour="blue", size =3) 
 ```
 
-![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)
+![](Linear_model_files/figure-markdown_github/unnamed-chunk-22-1.png)<br></br>
 Dashed: Malibu Regular: Impala <br></br> Malibu is cheaper that Impala
 when it has less than 89,508 miles. When it has more than that, it
 becomes more expensive than Impala.
